@@ -1,0 +1,17 @@
+{
+  "name": "travel-bot",
+  "version": "1.0.0",
+  "description": "Travel Chatbot Facebook Messanger",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "keywords": [
+    "Travel",
+    "Insurance"
+  ],
+  "author": "Rohit Bansal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
