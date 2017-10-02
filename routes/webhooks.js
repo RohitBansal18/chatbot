@@ -23,8 +23,10 @@ const router = express.Router();
 router.get('/', (req, res) => {
   if (req.query['hub.verify_token'] === process.env.WEBHOOK_TOKEN) {
     res.send(req.query['hub.challenge']);
+    console.log('Webhook message Received');
   } else {
     res.send('Error, wrong token');
+    console.log('Webhook message Received -- Error');
   }
 });
 
@@ -64,10 +66,10 @@ router.post('/', (req, res) => {
         console.log({messagingEvent});
         if (messagingEvent.message) {
           //receiveApi.handleReceiveMessage(messagingEvent);
-          res.send('Webhook Call Received');
+          console.log('Webhook message Received');
         } if (messagingEvent.postback) {
           //receiveApi.handleReceivePostback(messagingEvent);
-          res.send('Webhook Call Received');
+          console.log('Webhook postback Received');
         } else {
           console.log(
             'Webhook received unknown messagingEvent: ',
