@@ -1,14 +1,7 @@
-/**
- * Copyright 2017-present, Facebook, Inc. All rights reserved.
- *
- * This source code is licensed under the license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 // ===== MODULES ===============================================================
-
+var express = require('express');
 // ===== MESSENGER =============================================================
-import ThreadSetup from './messenger-api-helpers/thread-setup';
+//import ThreadSetup from './messenger-api-helpers/thread-setup';
 
 const app = express();
 
@@ -16,28 +9,33 @@ const app = express();
    =           Basic Configuration             =
    ============================================= */
 
+app.get('/', function(req, res){
+     res.send("Welcome Rohit");
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  const err = new Error('Not Found');
+  const err = new Error('Page Not Found - Verify URL');
   err.status = 404;
   next(err);
 });
 
-app.use(function(err, req, res) {
+//app.use(function(err, req, res) {
   // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  //res.locals.message = err.message;
+  //res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
+  //res.status(err.status || 500);
+  //res.render('error');
+  //res.send('error')
+//});
+
 
 /* ----------  Messenger setup  ---------- */
 
 //ThreadSetup.setDomainWhitelisting();
 //ThreadSetup.setPersistentMenu();
-ThreadSetup.setGetStarted();
+//ThreadSetup.setGetStarted();
 
 /* =============================================
    =                 Port Setup                =
