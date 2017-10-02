@@ -55,7 +55,7 @@ router.post('/', (req, res) => {
   res.sendStatus(200);
 
   const data = req.body;
-  console.log('${data}');
+  console.log(req.body);
   // Make sure this is a page subscription
   if (data.object === 'page') {
     // Iterate over each entry
