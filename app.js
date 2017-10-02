@@ -1,5 +1,6 @@
 // ===== MODULES ===============================================================
 import express from 'express';
+import webhooks from './routes/webhooks';
 // ===== MESSENGER =============================================================
 //import ThreadSetup from './messenger-api-helpers/thread-setup';
 
@@ -12,6 +13,9 @@ const app = express();
 app.get('/', function(req, res){
      res.send("Welcome Rohit");
 });
+
+app.use('/webhook', webhooks);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   const err = new Error('Page Not Found - Verify URL');
