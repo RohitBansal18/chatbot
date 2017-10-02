@@ -1,10 +1,18 @@
 // ===== MODULES ===============================================================
 import express from 'express';
+import bodyParser from 'body-parser';
+
+// ===== ROUTES ================================================================
 import webhooks from './routes/webhooks';
 // ===== MESSENGER =============================================================
 //import ThreadSetup from './messenger-api-helpers/thread-setup';
 
 const app = express();
+
+/* ----------  Parsers  ---------- */
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 /* =============================================
    =           Basic Configuration             =
