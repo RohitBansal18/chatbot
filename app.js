@@ -5,7 +5,7 @@ import bodyParser from 'body-parser';
 // ===== ROUTES ================================================================
 import webhooks from './routes/webhooks';
 // ===== MESSENGER =============================================================
-//import ThreadSetup from './messenger-api-helpers/thread-setup';
+import ThreadSetup from './messenger-api-helpers/thread-setup';
 
 const app = express();
 
@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: false}));
    ============================================= */
 
 app.get('/', function(req, res){
-     res.send("Welcome Rohit");
+     res.send("Welcome to Travel Chatbot");
 });
 
 app.use('/webhook', webhooks);
@@ -47,7 +47,7 @@ app.use(function(err, req, res) {
 
 //ThreadSetup.setDomainWhitelisting();
 //ThreadSetup.setPersistentMenu();
-//ThreadSetup.setGetStarted();
+ThreadSetup.setGetStarted();
 
 /* =============================================
    =                 Port Setup                =

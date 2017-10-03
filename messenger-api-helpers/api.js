@@ -23,7 +23,7 @@ const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
  * @param   {Object}          retries - # of times to attempt to send a message.
  * @returns {undefined}
  */
-const callAPI = (endPoint, messageDataArray, queryParams = {}, retries = 5) => {
+const callAPI = (endPoint, messageDataArray, queryParams = {}, retries = 2) => {
   // Error if developer forgot to specify an endpoint to send our request to
   if (!endPoint) {
     console.error('callAPI requires you specify an endpoint.');
@@ -82,15 +82,12 @@ const callAPI = (endPoint, messageDataArray, queryParams = {}, retries = 5) => {
   });
 };
 
-const callMessagesAPI = (messageDataArray, queryParams = {}) => {
-  return callAPI('messages', messageDataArray, queryParams);
-};
 
 const callThreadAPI = (messageDataArray, queryParams = {}) => {
   return callAPI('thread_settings', messageDataArray, queryParams);
 };
 
 export default {
-  callMessagesAPI,
+  //callMessagesAPI,
   callThreadAPI,
 };
