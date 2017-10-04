@@ -19,7 +19,7 @@ const getStarted =
   {
     setting_type: 'greeting',
     greeting: {
-      text: 'Hey {{user_first_name}}, Welcome! You are welcome to Excitement Bot! We’d help you pick a travel insurance. ',
+      text: 'Hey {{user_first_name}}, Welcome to Excitement Bot! We’d help you pick a travel insurance. ',
     }
   },
 ]
