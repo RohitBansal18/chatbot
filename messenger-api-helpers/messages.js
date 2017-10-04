@@ -16,7 +16,9 @@ const getStarted =[ {
 },
 {
   setting_type: 'greeting',
-  text: 'Hi, Welcome',
+  greeting: {
+    text: 'Hi, Welcome',
+  }
 },
 ]
 
