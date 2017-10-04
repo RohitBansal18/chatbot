@@ -17,7 +17,7 @@ const getStarted =[ {
 {
   setting_type: 'greeting',
   greeting: {
-    text: 'Hi, Welcome',
+    text: 'Hi {{user_first_name}}, Welcome to this travel bot',
   }
 },
 ]
