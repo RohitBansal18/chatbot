@@ -43,7 +43,7 @@ const persistentMenu = {
   locale:"default",
   composer_input_disabled: true,
   setting_type: 'call_to_actions',
-  thread_state: 'existing_thread',
+  thread_state: 'new_thread',
   call_to_actions: [
     setPreferencesButton,
     myAccountButton,
