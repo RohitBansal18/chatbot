@@ -38,6 +38,15 @@ const setDomainWhitelisting = () => {
     }
   );
 };
+/**
+ * Sets the persistent menu for the application
+ *
+ * @returns {undefined}
+ */
+const setPersistentMenu = () => {
+  api.callThreadAPI(messages.persistentMenu);
+};
+
 
 /**
  * Sets the Get Started button for the application
@@ -50,6 +59,6 @@ const setGetStarted = () => {
 
 export default {
   //setDomainWhitelisting,
-  //setPersistentMenu,
+  setPersistentMenu,
   setGetStarted,
 };
