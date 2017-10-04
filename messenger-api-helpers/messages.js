@@ -15,26 +15,9 @@ const setPreferencesButton = {
  * Button for displaying a postback button that triggers the change gift flow
  */
 const myAccountButton = {
-  type: 'nested',
+  type: 'postback',
   title: 'My Account',
-  "call_to_actions":[
-          {
-            "title":"Pay Bill",
-            "type":"postback",
-            "payload":"PAYBILL_PAYLOAD"
-          },
-          {
-            "title":"History",
-            "type":"postback",
-            "payload":"HISTORY_PAYLOAD"
-          },
-          {
-            "title":"Contact Info",
-            "type":"postback",
-            "payload":"CONTACT_INFO_PAYLOAD"
-          }
-        ]
-};
+  };
 
 /**
  * The persistent menu for users to use.
