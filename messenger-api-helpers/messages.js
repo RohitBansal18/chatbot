@@ -1,8 +1,9 @@
 const SERVER_URL = process.env.SERVER_URL;
+
 /**
  * The Get Started button.
  */
-const getStarted = {
+const getStarted =[ {
   setting_type: 'call_to_actions',
   thread_state: 'new_thread',
   call_to_actions: [
@@ -12,8 +13,14 @@ const getStarted = {
       }),
     },
   ],
-};
+},
+{
+  setting_type: 'greeting',
+  text: 'Hi, Welcome',
+},
+]
 
 export default {
+  //helloRewardMessage,
   getStarted,
 };

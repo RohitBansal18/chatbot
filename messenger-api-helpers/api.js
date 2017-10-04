@@ -82,7 +82,6 @@ const callAPI = (endPoint, messageDataArray, queryParams = {}, retries = 2) => {
   });
 };
 
-
 const callThreadAPI = (messageDataArray, queryParams = {}) => {
   return callAPI('thread_settings', messageDataArray, queryParams);
 };

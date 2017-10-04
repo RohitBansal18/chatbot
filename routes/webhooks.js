@@ -68,7 +68,7 @@ router.post('/', (req, res) => {
           //receiveApi.handleReceiveMessage(messagingEvent);
           console.log('Webhook message Received');
         } if (messagingEvent.postback) {
-          //receiveApi.handleReceivePostback(messagingEvent);
+          receiveApi.handleReceivePostback(messagingEvent);
           console.log('Webhook postback Received');
         } else {
           console.log(
