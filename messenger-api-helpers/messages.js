@@ -17,16 +17,19 @@ const setPreferencesButton = {
 const myAccountButton = {
   type: 'postback',
   title: 'My Account',
-  };
+  payload: JSON.stringify({
+    type: 'CHANGE_GIFT',
+  }),
+};
 
 /**
  * The persistent menu for users to use.
  */
 const persistentMenu = {
-  locale:"default",
-  composer_input_disabled: true,
+//  locale:"default",
+//  composer_input_disabled: true,
   setting_type: 'call_to_actions',
-  thread_state: 'existing_thread',
+  thread_state: 'new_thread',
   call_to_actions: [
     setPreferencesButton,
     myAccountButton,
