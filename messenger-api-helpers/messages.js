@@ -23,7 +23,7 @@ const setPreferencesButton = {
   type: 'web_url',
   title: 'Set Travel Preferences',
   //url: `${SERVER_URL}/`,
-  url:'https://myresume-rohitbansal.herokuapp.com'
+  url: 'https://myresume-rohitbansal.herokuapp.com',
   webview_height_ratio: 'tall',
   messenger_extensions: true,
 };
