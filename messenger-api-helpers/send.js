@@ -32,6 +32,16 @@ const typingOff = (recipientId) => {
   };
 };
 
+// Wraps a message JSON object with recipient information.
+const messageToJSON = (recipientId, messagePayload) => {
+  return {
+    recipient: {
+      id: recipientId,
+    },
+    message: messagePayload,
+  };
+};
+
 // Send one or more messages using the Send API.
 const sendMessage = (recipientId, messagePayloads) => {
   const messagePayloadArray = castArray(messagePayloads)
