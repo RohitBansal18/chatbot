@@ -58,7 +58,7 @@ const setGetStarted = () => {
 };
 
 export default {
-  //setDomainWhitelisting,
+  setDomainWhitelisting,
   setPersistentMenu,
   setGetStarted,
 };
