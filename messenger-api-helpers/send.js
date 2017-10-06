@@ -51,6 +51,6 @@ const sendHelloRewardMessage = (recipientId) =>
 
 export default {
   sendMessage,
-  sendReadReceipt,
+  //sendReadReceipt,
   sendHelloRewardMessage,
 };

@@ -65,13 +65,13 @@ const handleReceiveMessage = (event) => {
   // It's good practice to send the user a read receipt so they know
   // the bot has seen the message. This can prevent a user
   // spamming the bot if the requests take some time to return.
-  sendApi.sendReadReceipt(senderId);
+  //sendApi.sendReadReceipt(senderId);
 
-  if (message.text) { sendApi.sendWelcomeMessage(senderId); }
+  //if (message.text) { sendApi.sendWelcomeMessage(senderId); }
 };
 
 export default {
   handleReceivePostback,
   handleReceiveMessage,
-  handleNewGiftSelected,
+  //handleNewGiftSelected,
 };
