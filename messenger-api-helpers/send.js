@@ -54,12 +54,25 @@ const sendMessage = (recipientId, messagePayloads) => {
   ]);
 };
 
+// Send a read receipt to indicate the message has been read
+const sendReadReceipt = (recipientId) => {
+  const messageData = {
+    recipient: {
+      id: recipientId,
+    },
+    sender_action: 'mark_seen', // eslint-disable-line camelcase
+  };
+
+  api.callMessagesAPI(messageData);
+};
+
+
 // Send the initial message telling the user about the promotion.
 const sendHelloRewardMessage = (recipientId) =>
   sendMessage(recipientId, messages.helloRewardMessage);
 
 export default {
   sendMessage,
-  //sendReadReceipt,
+  sendReadReceipt,
   sendHelloRewardMessage,
 };
