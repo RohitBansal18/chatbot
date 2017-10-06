@@ -10,7 +10,7 @@ const helloRewardMessage = {
     payload: {
       template_type: 'button',
       text: 'You are welcome to Excitement Bot! We’d help you pick a travel insurance.',
-      buttons: [setPreferencesButton],
+      //buttons: [setPreferencesButton],
     },
   },
 };
@@ -22,8 +22,8 @@ const helloRewardMessage = {
 const setPreferencesButton = {
   type: 'web_url',
   title: 'Set Travel Preferences',
-  //url: `${SERVER_URL}/`,
-  url: 'https://myresume-rohitbansal.herokuapp.com',
+  url: `${SERVER_URL}/`,
+//  url: 'https://myresume-rohitbansal.herokuapp.com',
   webview_height_ratio: 'tall',
   messenger_extensions: true,
 };
