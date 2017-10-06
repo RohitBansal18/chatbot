@@ -11,6 +11,7 @@ const app = express();
 
 /* ----------  Parsers  ---------- */
 
+app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -19,7 +20,7 @@ app.use(bodyParser.urlencoded({extended: false}));
    ============================================= */
 
 app.get('/', function(req, res){
-     res.send("Welcome to Travel Chatbot");
+     res.sendFile(__dirname + '/index.html');
 });
 
 app.use('/webhook', webhooks);
