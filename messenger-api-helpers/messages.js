@@ -77,7 +77,7 @@ const getStarted =
 ]
 
 export default {
-  //helloRewardMessage,
+  helloRewardMessage,
   persistentMenu,
   getStarted,
 };

@@ -54,7 +54,6 @@ const sendMessage = (recipientId, messagePayloads) => {
   ]);
 };
 
-
 // Send the initial message telling the user about the promotion.
 const sendHelloRewardMessage = (recipientId) =>
   sendMessage(recipientId, messages.helloRewardMessage);
