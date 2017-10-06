@@ -49,7 +49,7 @@ const sendMessage = (recipientId, messagePayloads) => {
 
   api.callMessagesAPI([
     typingOn(recipientId),
-  //  ...messagePayloadArray,
+   ...messagePayloadArray,
     typingOff(recipientId),
   ]);
 };
@@ -68,8 +68,11 @@ const sendReadReceipt = (recipientId) => {
 
 
 // Send the initial message telling the user about the promotion.
-const sendHelloRewardMessage = (recipientId) =>
+const sendHelloRewardMessage = (recipientId) => {
+  logger.fbLog("send_message", {payload: "hello_reward"}, recipientId);
   sendMessage(recipientId, messages.helloRewardMessage);
+}
+
 
 export default {
   sendMessage,

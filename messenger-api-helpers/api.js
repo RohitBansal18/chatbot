@@ -72,7 +72,8 @@ const callAPI = (endPoint, messageDataArray, queryParams = {}, retries = 5) => {
         response.statusCode,
         response.statusMessage,
         body.error,
-        queryParams
+        queryParams,
+        messageToSend
       );
 
       // Retry the request

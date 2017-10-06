@@ -10,11 +10,10 @@ const helloRewardMessage = {
     payload: {
       template_type: 'button',
       text: 'You are welcome to Excitement Bot!',
-      buttons: [myAccountButton],
+      buttons: [setPreferencesButton],
     },
   },
 };
-
 
 /**
  * Button for displaying the preferences menu inside a webview
@@ -23,7 +22,6 @@ const setPreferencesButton = {
   type: 'web_url',
   title: 'Set Travel Preferences',
   url: `${SERVER_URL}/`,
-//  url: 'https://myresume-rohitbansal.herokuapp.com',
   webview_height_ratio: 'tall',
   messenger_extensions: true,
 };
