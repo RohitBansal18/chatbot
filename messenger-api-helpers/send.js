@@ -49,7 +49,7 @@ const sendMessage = (recipientId, messagePayloads) => {
 
   api.callMessagesAPI([
     typingOn(recipientId),
-    ...messagePayloadArray,
+  //  ...messagePayloadArray,
     typingOff(recipientId),
   ]);
 };
