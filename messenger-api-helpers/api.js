@@ -82,11 +82,15 @@ const callAPI = (endPoint, messageDataArray, queryParams = {}, retries = 2) => {
   });
 };
 
+const callMessagesAPI = (messageDataArray, queryParams = {}) => {
+  return callAPI('messages', messageDataArray, queryParams);
+};
+
 const callThreadAPI = (messageDataArray, queryParams = {}) => {
   return callAPI('thread_settings', messageDataArray, queryParams);
 };
 
 export default {
-  //callMessagesAPI,
+  callMessagesAPI,
   callThreadAPI,
 };

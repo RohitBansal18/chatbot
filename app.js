@@ -47,7 +47,7 @@ app.use(function(err, req, res) {
 
 //ThreadSetup.setDomainWhitelisting();
 ThreadSetup.setPersistentMenu();
-//ThreadSetup.setGetStarted();
+ThreadSetup.setGetStarted();
 
 /* =============================================
    =                 Port Setup                =
