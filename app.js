@@ -11,7 +11,7 @@ const app = express();
 
 /* ----------  Parsers  ---------- */
 
-app.use(express.static('public'));
+//app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -19,9 +19,9 @@ app.use(bodyParser.urlencoded({extended: false}));
    =           Basic Configuration             =
    ============================================= */
 
-//app.get('/', function(req, res){
-//     res.sendFile(__dirname + '/index.html');
-//});
+app.get('/', function(req, res){
+     res.send('Welcome to Chatbot');
+});
 
 app.use('/webhook', webhooks);
 

@@ -10,7 +10,7 @@ const helloRewardMessage = {
     payload: {
       template_type: 'button',
       text: 'You are welcome to Excitement Bot!',
-      buttons: [myAccountButton]
+      buttons: [setPreferencesButton],
     },
   },
 };
@@ -21,9 +21,9 @@ const helloRewardMessage = {
 const setPreferencesButton = {
   type: 'web_url',
   title: 'Set Travel Preferences',
-  url: 'www.google.com',
-  webview_height_ratio: 'compact',
-  messenger_extensions: true
+  url: `${SERVER_URL}/`,
+  webview_height_ratio: 'tall',
+  messenger_extensions: true,
 };
 
 /**
