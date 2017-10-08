@@ -53,7 +53,7 @@ router.post('/', (req, res) => {
     awhile to process.
   */
   res.sendStatus(200);
-
+  debugger;
   const data = req.body;
   console.log({data});
     // Make sure this is a page subscription
