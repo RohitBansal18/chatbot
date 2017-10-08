@@ -34,6 +34,7 @@ const typingOff = (recipientId) => {
 
 // Wraps a message JSON object with recipient information.
 const messageToJSON = (recipientId, messagePayload) => {
+  console.log('Failed messageToJSON', messageToJSON);
   return {
     recipient: {
       id: recipientId,
@@ -45,7 +46,10 @@ const messageToJSON = (recipientId, messagePayload) => {
 // Send one or more messages using the Send API.
 const sendMessage = (recipientId, messagePayloads) => {
   const messagePayloadArray = castArray(messagePayloads)
-    .map((messagePayload) => messageToJSON(recipientId, messagePayload));
+    .map((messagePayload) => {
+      console.log('Failed messagePayload', messagePayload);
+      messageToJSON(recipientId, messagePayload)
+    });
 
   api.callMessagesAPI([
     typingOn(recipientId),
