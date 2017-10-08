@@ -10,7 +10,7 @@ const helloRewardMessage = {
     payload: {
       template_type: 'button',
       text: 'You are welcome to Excitement Bot!',
-      buttons: [setPreferencesButton],
+      buttons: [setPreferencesButton]
     },
   },
 };
