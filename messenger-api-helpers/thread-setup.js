@@ -27,7 +27,7 @@ const SERVER_URL = process.env.SERVER_URL;
  * @returns {undefined}
  */
 const setDomainWhitelisting = () => {
-  api.callMessengerProfileAPI(
+  api.callThreadAPI(
     {
       setting_type: 'domain_whitelisting',
       whitelisted_domains: [SERVER_URL, 'https://www.google.com'],
@@ -54,7 +54,7 @@ const setPersistentMenu = () => {
  * @returns {undefined}
  */
 const setGetStarted = () => {
-  api.callThreadAPI(messages.getStarted);
+  api.callMessengerProfileAPI(messages.getStarted);
 };
 
 export default {
