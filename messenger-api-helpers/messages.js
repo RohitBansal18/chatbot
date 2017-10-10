@@ -30,11 +30,25 @@ const setPreferencesButton = {
  * Button for displaying a postback button that triggers the change gift flow
  */
 const myAccountButton = {
-  type: 'postback',
+  type: 'nested',
   title: 'My Insurance',
-  payload: JSON.stringify({
-    type: 'CHANGE_GIFT',
-  }),
+  call_to_actions:[
+      {
+        "title":"Pay Bill",
+        "type":"postback",
+        "payload":"PAYBILL_PAYLOAD"
+      },
+      {
+        "title":"History",
+        "type":"postback",
+        "payload":"HISTORY_PAYLOAD"
+      },
+      {
+        "title":"Contact Info",
+        "type":"postback",
+        "payload":"CONTACT_INFO_PAYLOAD"
+      }
+    ],
 };
 
 /**
