@@ -27,7 +27,7 @@ const SERVER_URL = process.env.SERVER_URL;
  * @returns {undefined}
  */
 const setDomainWhitelisting = () => {
-  api.callThreadAPI(
+  api.callMessengerProfileAPI(
     {
       setting_type: 'domain_whitelisting',
       whitelisted_domains: [SERVER_URL, 'https://www.google.com'],
