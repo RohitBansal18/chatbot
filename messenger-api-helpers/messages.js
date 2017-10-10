@@ -41,7 +41,7 @@ const myAccountButton = {
       {
         title:'Maid Insurance',
         type: 'postback',
-        payload: 'HISTORY_PAYLOA'
+        payload: 'HISTORY_PAYLOAD'
       },
       {
         title: 'Car Insurance',
