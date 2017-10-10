@@ -104,14 +104,16 @@ const getStarted =
 [
   {
     get_started:{
-      payload: 'GET_STARTED'
+      payload: JSON.stringify({
+          type: 'GET_STARTED',
+        }),
     }
   },
   {
     greeting: [
     {
       locale: 'default',
-      text: 'Hey {{user_first_name}}, Welcome to Excitement Bot! We’d help you pick a travel insurance. ',
+      text: 'Hey {{user_first_name}}, Welcome to Excitement Bot! We’d help you pick a insurance. ',
     }
   ]
   },
