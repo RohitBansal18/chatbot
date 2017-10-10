@@ -60,40 +60,42 @@ const myAccountButton = {
 /**
  * The persistent menu for users to use.
  */
-const persistentMenu = {
-  locale:"default",
-  composer_input_disabled: true,
-  call_to_actions: [
-    {
-      type: 'web_url',
-      title: 'Set Travel Preferences',
-      url: `${SERVER_URL}/`,
-      webview_height_ratio: 'tall',
-      messenger_extensions: true,
-    },
-    {
-      title: 'Insurance',
-      type: 'nested',
-      call_to_actions:[
-          {
-            title: 'Travel Insurance',
-            type: 'postback',
-            payload: 'PAYBILL_PAYLOAD'
-          },
-          {
-            title:'Maid Insurance',
-            type: 'postback',
-            payload: 'HISTORY_PAYLOAD'
-          },
-          {
-            title: 'Car Insurance',
-            type: 'postback',
-            payload: 'CONTACT_INFO_PAYLOAD'
-          }
-        ],
-    },
-  ],
-};
+const persistentMenu = [
+  {
+    locale: 'default',
+    composer_input_disabled: true,
+    call_to_actions: [
+      {
+        type: 'web_url',
+        title: 'Set Travel Preferences',
+        url: `${SERVER_URL}/`,
+        webview_height_ratio: 'tall',
+        messenger_extensions: true,
+      },
+      {
+        title: 'Insurance',
+        type: 'nested',
+        call_to_actions:[
+            {
+              title: 'Travel Insurance',
+              type: 'postback',
+              payload: 'PAYBILL_PAYLOAD'
+            },
+            {
+              title:'Maid Insurance',
+              type: 'postback',
+              payload: 'HISTORY_PAYLOAD'
+            },
+            {
+              title: 'Car Insurance',
+              type: 'postback',
+              payload: 'CONTACT_INFO_PAYLOAD'
+            }
+          ],
+      },
+    ],
+  }
+]
 
 /**
  * The Get Started button.
