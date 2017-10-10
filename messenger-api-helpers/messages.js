@@ -13,7 +13,7 @@ const helloRewardMessage = {
       buttons: [{
         type: 'web_url',
         title: 'Set Travel Preferences',
-        url: `${SERVER_URL}/`,
+        url: 'www.google.com',
         webview_height_ratio: 'tall',
         messenger_extensions: true,
       }],
