@@ -117,6 +117,13 @@ const getStarted =
   },
 ]
 
+/**
+ * The whitelisted_domains.
+ */
+const whitelisteddomains = {
+    whitelisted_domains: [SERVER_URL, 'https://www.google.com'],
+};
+
 export default {
   helloRewardMessage,
   persistentMenu,
