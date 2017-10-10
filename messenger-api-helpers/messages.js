@@ -66,8 +66,34 @@ const persistentMenu = {
   setting_type: 'call_to_actions',
   thread_state: 'existing_thread',
   call_to_actions: [
-    setPreferencesButton,
-    myAccountButton,
+    {
+      type: 'web_url',
+      title: 'Set Travel Preferences',
+      url: `${SERVER_URL}/`,
+      webview_height_ratio: 'tall',
+      messenger_extensions: true,
+    },
+    {
+      title: 'Insurance',
+      type: 'nested',
+      call_to_actions:[
+          {
+            title: 'Travel Insurance',
+            type: 'postback',
+            payload: 'PAYBILL_PAYLOAD'
+          },
+          {
+            title:'Maid Insurance',
+            type: 'postback',
+            payload: 'HISTORY_PAYLOAD'
+          },
+          {
+            title: 'Car Insurance',
+            type: 'postback',
+            payload: 'CONTACT_INFO_PAYLOAD'
+          }
+        ],
+    },
   ],
 };
 
