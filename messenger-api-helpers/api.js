@@ -98,4 +98,5 @@ const callMessengerProfileAPI = (messageDataArray, queryParams = {}) => {
 export default {
   callMessagesAPI,
   callThreadAPI,
+  callMessengerProfileAPI,
 };
