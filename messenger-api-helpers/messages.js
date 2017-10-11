@@ -132,55 +132,54 @@ const helloRewardMessage = {
 /**
  * The persistent menu for users to use.
  */
-const persistentMenu = [
-  {
-    get_started:{
-      payload: JSON.stringify({
-          type: 'GET_STARTED',
-        }),
+const persistentMenu = {
+  persistent_menu: [
+    {
+      locale: 'default',
+      composer_input_disabled: true,
+      call_to_actions: [
+        {
+          title: 'Buy Insurance',
+          type: 'postback',
+          call_to_actions:[
+              {
+                title: 'Travel Insurance',
+                type: 'postback',
+                payload: JSON.stringify({
+                    type: 'PAYBILL_PAYLOAD',
+                  }),
+              },
+              {
+                title:'Term Insurance',
+                type: 'postback',
+                payload: JSON.stringify({
+                    type: 'HISTORY_PAYLOAD',
+                  }),
+              },
+              {
+                title: 'Car Insurance',
+                type: 'postback',
+                payload: JSON.stringify({
+                    type: 'CONTACT_INFO_PAYLOAD',
+                  }),
+              }
+            ],
+        },
+        {
+          type: 'web_url',
+          title: 'Set Travel Preferences',
+          url: 'https://www.google.com',
+          webview_height_ratio: 'tall',
+          messenger_extensions: true,
+        },
+      ]
+    },
+    {
+      "locale":"zh_CN",
+      "composer_input_disabled":false
     }
-  },
-  {
-    locale: 'default',
-    composer_input_disabled: true,
-    call_to_actions: [
-      {
-        title: 'Buy Insurance',
-        type: 'postback',
-        call_to_actions:[
-            {
-              title: 'Travel Insurance',
-              type: 'postback',
-              payload: JSON.stringify({
-                  type: 'PAYBILL_PAYLOAD',
-                }),
-            },
-            {
-              title:'Maid Insurance',
-              type: 'postback',
-              payload: JSON.stringify({
-                  type: 'HISTORY_PAYLOAD',
-                }),
-            },
-            {
-              title: 'Car Insurance',
-              type: 'postback',
-              payload: JSON.stringify({
-                  type: 'CONTACT_INFO_PAYLOAD',
-                }),
-            }
-          ],
-      },
-      {
-        type: 'web_url',
-        title: 'Set Travel Preferences',
-        url: 'https://www.google.com',
-        webview_height_ratio: 'tall',
-        messenger_extensions: true,
-      },
-    ],
-  }
-]
+  ]
+}
 
 /**
  * The Get Started button.
