@@ -37,13 +37,6 @@ const persistentMenu = [
     composer_input_disabled: true,
     call_to_actions: [
       {
-        type: 'web_url',
-        title: 'Set Travel Preferences',
-        url: 'https://www.google.com',
-        webview_height_ratio: 'tall',
-        messenger_extensions: true,
-      },
-      {
         title: 'Insurance',
         type: 'nested',
         call_to_actions:[
@@ -63,6 +56,13 @@ const persistentMenu = [
               payload: 'CONTACT_INFO_PAYLOAD'
             }
           ],
+      },
+      {
+        type: 'web_url',
+        title: 'Set Travel Preferences',
+        url: 'https://www.google.com',
+        webview_height_ratio: 'tall',
+        messenger_extensions: true,
       },
     ],
   }
