@@ -81,6 +81,9 @@ const handleReceiveMessage = (event) => {
   case 'TRAVEL_PAYLOAD':
     sendApi.handleTravelQuickReply(msgsenderId);
     break;
+  case 'SAVING_PAYLOAD':
+    sendApi.handleSavingsQuickReply(msgsenderId);
+    break;
   default:
     console.error(`Unknown Message called: ${type}`);
     break;

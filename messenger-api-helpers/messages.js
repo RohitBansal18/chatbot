@@ -39,6 +39,23 @@ const buyTravelInsurance = {
   },
 };
 
+const buySavingsInsurance = {
+  attachment: {
+    type: 'template',
+    payload: {
+      template_type: 'button',
+      text: 'click to endowment plan!',
+      buttons: [{
+        type: 'web_url',
+        title: 'Buy Endowment Plan',
+        url: 'https://www.fwd.com.sg/savings-and-investments/endowment-insurance/',
+        webview_height_ratio: 'tall',
+        messenger_extensions: true,
+      }],
+    },
+  },
+};
+
 /**
  * Message that informs the user of the promotion and prompts
  * them to set their preferences.
@@ -128,8 +145,8 @@ const persistentMenu = [
     composer_input_disabled: true,
     call_to_actions: [
       {
-        title: 'Insurance',
-        type: 'nested',
+        title: 'Buy Insurance',
+        type: 'postback',
         call_to_actions:[
             {
               title: 'Travel Insurance',
@@ -194,7 +211,8 @@ const whitelisteddomains = {
       SERVER_URL,
       'https://www.google.com',
       'https://www.fwd.com.sg/life-insurance/enhanced-term-life-insurance/',
-      'https://www.fwd.com.sg/travel-insurance/'
+      'https://www.fwd.com.sg/travel-insurance/',
+      'https://www.fwd.com.sg/savings-and-investments/endowment-insurance/'
   ],
 };
 
@@ -206,4 +224,5 @@ export default {
   quickReplies,
   buyTermInsurance,
   buyTravelInsurance,
+  buySavingsInsurance,
 };

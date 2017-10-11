@@ -83,6 +83,10 @@ const handleTravelQuickReply = (recipientId) => {
   sendMessage(recipientId, messages.buyTravelInsurance);
 }
 
+// Send Savings Webview.
+const handleSavingsQuickReply = (recipientId) => {
+  sendMessage(recipientId, messages.buySavingsInsurance);
+}
 
 export default {
   sendMessage,
@@ -90,4 +94,5 @@ export default {
   sendHelloRewardMessage,
   handleTermQuickReply,
   handleTravelQuickReply,
+  handleSavingsQuickReply,
 };
