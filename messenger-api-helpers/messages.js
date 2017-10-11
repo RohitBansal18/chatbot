@@ -135,7 +135,9 @@ const helloRewardMessage = {
 const persistentMenu = [
   {
     get_started: {
-      payload: 'GET_STARTED'
+      payload: JSON.stringify({
+          type: 'GET_STARTED',
+        }),
     }
   },
   {
@@ -159,12 +161,16 @@ const persistentMenu = [
               {
                 title: 'Travel Insurance',
                 type: 'postback',
-                payload: 'PAYBILL_PAYLOAD'
+                payload: JSON.stringify({
+                  type: 'PAYBILL_PAYLOAD',
+                }),
               },
               {
                 title:'Term Insurance',
                 type: 'postback',
-                payload: 'HISTORY_PAYLOAD'
+                payload: JSON.stringify({
+                  type: 'HISTORY_PAYLOAD',
+                }),
               }
           ]
         },
