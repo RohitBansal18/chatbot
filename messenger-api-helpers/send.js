@@ -73,6 +73,13 @@ const sendHelloRewardMessage = (recipientId) => {
   sendMessage(recipientId, messages.quickReplies);
 }
 
+// Send Maid Webview.
+const handleTermQuickReply = (recipientId) => {
+  sendMessage(recipientId, messages.captureTermDetails);
+  sendMessage(recipientId, messages.quickReplies);
+  //sendMessage(recipientId, messages.quickRepliesTerm);
+}
+
 
 export default {
   sendMessage,

@@ -1,5 +1,21 @@
 const SERVER_URL = process.env.SERVER_URL;
 
+
+/**
+ * Message that informs the user of the promotion and prompts
+ * them to set their preferences.
+ */
+const captureTermDetails = {
+      buttons: [{
+        type: 'web_url',
+        title: 'Set Term Preferences',
+        url: 'https://www.fwd.com.sg/life-insurance/enhanced-term-life-insurance/',
+        webview_height_ratio: 'tall',
+        messenger_extensions: true,
+      }],
+};
+
+
 /**
  * Message that informs the user of the promotion and prompts
  * them to set their preferences.
@@ -25,21 +41,52 @@ const helloRewardMessage = {
  * Quick Replies
  */
  const quickReplies = {
-    text: 'Here is a quick reply!',
+    text: 'Pls let us know your choice!',
     quick_replies: [
       {
         content_type: 'text',
-        title: 'Search',
+        title: 'savings',
         payload: JSON.stringify({
-            type: 'POSTBACK_PAYLOAD',
+            type: 'SAVING_PAYLOAD',
           }),
       },
       {
-        content_type: 'location'
+        content_type: 'text',
+        title: 'travel',
+        payload: JSON.stringify({
+            type: 'TRAVEL_PAYLOAD',
+          }),
+      },
+      {
+        content_type: 'text',
+        title: 'term',
+        payload: JSON.stringify({
+            type: 'TERM_PAYLOAD',
+          }),
+      },
+      {
+        content_type: 'text',
+        title: 'investments',
+        payload: JSON.stringify({
+            type: 'INVESTMENT_PAYLOAD',
+          }),
+      },
+      {
+        content_type: 'text',
+        title: 'personal accident',
+        payload: JSON.stringify({
+            type: 'HOUSE_PAYLOAD',
+          }),
+      },
+      {
+        content_type: 'text',
+        title: 'car Insurance',
+        payload: JSON.stringify({
+            type: 'CAR_PAYLOAD',
+          }),
       },
     ]
-  }
-;
+};
 
 
 /**
@@ -120,7 +167,7 @@ const getStarted = [
  * The whitelisted_domains.
  */
 const whitelisteddomains = {
-    whitelisted_domains: [SERVER_URL, 'https://www.google.com'],
+    whitelisted_domains: [SERVER_URL, 'https://www.google.com','https://www.fwd.com.sg/life-insurance/enhanced-term-life-insurance/'],
 };
 
 export default {
