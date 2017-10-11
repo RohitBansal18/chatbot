@@ -70,6 +70,7 @@ const sendReadReceipt = (recipientId) => {
 // Send the initial message telling the user about the promotion.
 const sendHelloRewardMessage = (recipientId) => {
   sendMessage(recipientId, messages.helloRewardMessage);
+  sendMessage(recipientId, messages.quickReplies);
 }
 
 

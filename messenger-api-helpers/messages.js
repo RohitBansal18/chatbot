@@ -22,6 +22,27 @@ const helloRewardMessage = {
 };
 
 /**
+ * Quick Replies
+ */
+ const quickReplies = {
+    text: 'Here is a quick reply!',
+    quick_replies: [
+      {
+        content_type: 'text',
+        title: 'Search',
+        payload: JSON.stringify({
+            type: 'POSTBACK_PAYLOAD',
+          }),
+      },
+      {
+        content_type: 'location'
+      },
+    ]
+  }
+;
+
+
+/**
  * The persistent menu for users to use.
  */
 const persistentMenu = [
@@ -107,4 +128,5 @@ export default {
   persistentMenu,
   getStarted,
   whitelisteddomains,
+  quickReplies,
 };
