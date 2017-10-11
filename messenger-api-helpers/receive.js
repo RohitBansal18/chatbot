@@ -70,7 +70,19 @@ const handleReceiveMessage = (event) => {
   // spamming the bot if the requests take some time to return.
   sendApi.sendReadReceipt(senderId);
 
-  if (message.text) { sendApi.sendWelcomeMessage(senderId); }
+  const {type, data} = JSON.parse(event.message.quick_reply.payload);
+  const msgsenderId = event.sender.id;
+
+  // perform an action based on the type of payload received
+  switch (type) {
+  case 'TERM_PAYLOAD':
+    sendApi.handleTermQuickReply(msgsenderId);
+    break;
+  default:
+    console.error(`Unknown Message called: ${type}`);
+    break;
+  }
+  //if (message.text) { sendApi.sendWelcomeMessage(senderId); }
 };
 
 export default {
