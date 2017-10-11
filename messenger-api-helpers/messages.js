@@ -22,45 +22,16 @@ const helloRewardMessage = {
 };
 
 /**
- * Button for displaying the preferences menu inside a webview
- */
-const setPreferencesButton = {
-  type: 'web_url',
-  title: 'Set Travel Preferences',
-  url: `${SERVER_URL}/`,
-  webview_height_ratio: 'tall',
-  messenger_extensions: true,
-};
-
-/**
- * Button for displaying a postback button that triggers the change gift flow
- */
-const myAccountButton = {
-  title: 'Insurance',
-  type: 'nested',
-  call_to_actions:[
-      {
-        title: 'Travel Insurance',
-        type: 'postback',
-        payload: 'PAYBILL_PAYLOAD'
-      },
-      {
-        title:'Maid Insurance',
-        type: 'postback',
-        payload: 'HISTORY_PAYLOAD'
-      },
-      {
-        title: 'Car Insurance',
-        type: 'postback',
-        payload: 'CONTACT_INFO_PAYLOAD'
-      }
-    ],
-};
-
-/**
  * The persistent menu for users to use.
  */
 const persistentMenu = [
+  {
+    get_started:{
+      payload: JSON.stringify({
+          type: 'GET_STARTED',
+        }),
+    }
+  },
   {
     locale: 'default',
     composer_input_disabled: true,
@@ -100,8 +71,7 @@ const persistentMenu = [
 /**
  * The Get Started button.
  */
-const getStarted =
-[
+const getStarted = [
   {
     get_started:{
       payload: JSON.stringify({
