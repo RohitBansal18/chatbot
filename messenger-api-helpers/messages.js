@@ -8,7 +8,7 @@ const SERVER_URL = process.env.SERVER_URL;
 const captureTermDetails = {
       buttons: [{
         type: 'web_url',
-        title: 'Set Term Preferences',
+        title: 'Set Term Preferences click here',
         url: 'https://www.fwd.com.sg/life-insurance/enhanced-term-life-insurance/',
         webview_height_ratio: 'tall',
         messenger_extensions: true,
@@ -176,4 +176,5 @@ export default {
   getStarted,
   whitelisteddomains,
   quickReplies,
+  captureTermDetails,
 };

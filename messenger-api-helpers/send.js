@@ -85,4 +85,5 @@ export default {
   sendMessage,
   sendReadReceipt,
   sendHelloRewardMessage,
+  handleTermQuickReply,
 };
