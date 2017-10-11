@@ -155,7 +155,7 @@ const persistentMenu = [
         {
           title: 'Buy Insurance',
           type: 'nested',
-          call_to_actions:[
+          call_to_actions: [
               {
                 title: 'Travel Insurance',
                 type: 'postback',
@@ -165,15 +165,14 @@ const persistentMenu = [
                 title:'Term Insurance',
                 type: 'postback',
                 payload: 'HISTORY_PAYLOAD'
-              },
-          ],
+              }
+          ]
         },
         {
           type: 'web_url',
           title: 'Set Travel Preferences',
           url: 'https://www.google.com',
           webview_height_ratio: 'tall',
-          messenger_extensions: true,
         },
       ]
     }
