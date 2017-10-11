@@ -145,25 +145,14 @@ const persistentMenu = {
               {
                 title: 'Travel Insurance',
                 type: 'postback',
-                payload: JSON.stringify({
-                    type: 'PAYBILL_PAYLOAD',
-                  }),
+                payload: 'PAYBILL_PAYLOAD'
               },
               {
                 title:'Term Insurance',
                 type: 'postback',
-                payload: JSON.stringify({
-                    type: 'HISTORY_PAYLOAD',
-                  }),
+                payload: 'HISTORY_PAYLOAD'
               },
-              {
-                title: 'Car Insurance',
-                type: 'postback',
-                payload: JSON.stringify({
-                    type: 'CONTACT_INFO_PAYLOAD',
-                  }),
-              }
-            ],
+          ],
         },
         {
           type: 'web_url',
@@ -182,10 +171,8 @@ const persistentMenu = {
  */
 const getStarted = [
   {
-    get_started:{
-      payload: JSON.stringify({
-          type: 'GET_STARTED',
-        }),
+    get_started: {
+      payload: 'GET_STARTED'
     }
   },
   {
