@@ -5,7 +5,7 @@ const SERVER_URL = process.env.SERVER_URL;
  * Message that informs the user of the promotion and prompts
  * them to set their preferences.
  */
-const captureTermDetails = {
+const buyTermInsurance = {
   attachment: {
     type: 'template',
     payload: {
@@ -15,6 +15,23 @@ const captureTermDetails = {
         type: 'web_url',
         title: 'Buy Life Term Plan',
         url: 'https://www.fwd.com.sg/life-insurance/enhanced-term-life-insurance/',
+        webview_height_ratio: 'tall',
+        messenger_extensions: true,
+      }],
+    },
+  },
+};
+
+const buyTravelInsurance = {
+  attachment: {
+    type: 'template',
+    payload: {
+      template_type: 'button',
+      text: 'click to buy travel plan!',
+      buttons: [{
+        type: 'web_url',
+        title: 'Buy Travel Plan',
+        url: 'https://www.fwd.com.sg/travel-insurance/',
         webview_height_ratio: 'tall',
         messenger_extensions: true,
       }],
@@ -173,7 +190,12 @@ const getStarted = [
  * The whitelisted_domains.
  */
 const whitelisteddomains = {
-    whitelisted_domains: [SERVER_URL, 'https://www.google.com','https://www.fwd.com.sg/life-insurance/enhanced-term-life-insurance/'],
+    whitelisted_domains: [
+      SERVER_URL,
+      'https://www.google.com',
+      'https://www.fwd.com.sg/life-insurance/enhanced-term-life-insurance/',
+      'https://www.fwd.com.sg/travel-insurance/'
+  ],
 };
 
 export default {
@@ -182,5 +204,6 @@ export default {
   getStarted,
   whitelisteddomains,
   quickReplies,
-  captureTermDetails,
+  buyTermInsurance,
+  buyTravelInsurance,
 };

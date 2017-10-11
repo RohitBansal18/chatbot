@@ -73,11 +73,14 @@ const sendHelloRewardMessage = (recipientId) => {
   sendMessage(recipientId, messages.quickReplies);
 }
 
-// Send Maid Webview.
+// Send Term Webview.
 const handleTermQuickReply = (recipientId) => {
-  sendMessage(recipientId, messages.captureTermDetails);
-  //sendMessage(recipientId, messages.quickReplies);
-  //sendMessage(recipientId, messages.quickRepliesTerm);
+  sendMessage(recipientId, messages.buyTermInsurance);
+}
+
+// Send Travel Webview.
+const handleTravelQuickReply = (recipientId) => {
+  sendMessage(recipientId, messages.buyTravelInsurance);
 }
 
 
@@ -86,4 +89,5 @@ export default {
   sendReadReceipt,
   sendHelloRewardMessage,
   handleTermQuickReply,
+  handleTravelQuickReply,
 };
