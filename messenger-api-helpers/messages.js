@@ -43,17 +43,23 @@ const persistentMenu = [
             {
               title: 'Travel Insurance',
               type: 'postback',
-              payload: 'PAYBILL_PAYLOAD'
+              payload: JSON.stringify({
+                  type: 'PAYBILL_PAYLOAD',
+                }),
             },
             {
               title:'Maid Insurance',
               type: 'postback',
-              payload: 'HISTORY_PAYLOAD'
+              payload: JSON.stringify({
+                  type: 'HISTORY_PAYLOAD',
+                }),
             },
             {
               title: 'Car Insurance',
               type: 'postback',
-              payload: 'CONTACT_INFO_PAYLOAD'
+              payload: JSON.stringify({
+                  type: 'CONTACT_INFO_PAYLOAD',
+                }),
             }
           ],
       },
