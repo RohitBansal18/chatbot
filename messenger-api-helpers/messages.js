@@ -140,7 +140,7 @@ const persistentMenu = {
       call_to_actions: [
         {
           title: 'Buy Insurance',
-          type: 'postback',
+          type: 'nested',
           call_to_actions:[
               {
                 title: 'Travel Insurance',
@@ -173,10 +173,6 @@ const persistentMenu = {
           messenger_extensions: true,
         },
       ]
-    },
-    {
-      "locale":"zh_CN",
-      "composer_input_disabled":false
     }
   ]
 }
