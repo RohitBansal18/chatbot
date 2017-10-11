@@ -133,7 +133,19 @@ const helloRewardMessage = {
  * The persistent menu for users to use.
  */
 const persistentMenu = [
-  getStarted,
+  {
+    get_started: {
+      payload: 'GET_STARTED'
+    }
+  },
+  {
+    greeting: [
+    {
+      locale: 'default',
+      text: 'Hey {{user_first_name}}, Welcome to Excitement Bot! We’d help you pick a insurance. ',
+    }
+  ]
+  },
   {
   persistent_menu: [
     {
