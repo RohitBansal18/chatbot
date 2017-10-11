@@ -39,7 +39,7 @@ const persistentMenu = [
       {
         type: 'web_url',
         title: 'Set Travel Preferences',
-        url: `${SERVER_URL}/`,
+        url: 'https://www.google.com',
         webview_height_ratio: 'tall',
         messenger_extensions: true,
       },
