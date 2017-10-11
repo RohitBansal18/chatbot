@@ -132,7 +132,9 @@ const helloRewardMessage = {
 /**
  * The persistent menu for users to use.
  */
-const persistentMenu = {
+const persistentMenu = [
+  getStarted,
+  {
   persistent_menu: [
     {
       locale: 'default',
@@ -165,6 +167,7 @@ const persistentMenu = {
     }
   ]
 }
+]
 
 /**
  * The Get Started button.

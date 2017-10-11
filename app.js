@@ -47,7 +47,7 @@ app.use(function(err, req, res) {
 /* ----------  Messenger setup  ---------- */
 
 ThreadSetup.setDomainWhitelisting();
-ThreadSetup.setGetStarted();
+//ThreadSetup.setGetStarted();
 ThreadSetup.setPersistentMenu();
 
 /* =============================================
