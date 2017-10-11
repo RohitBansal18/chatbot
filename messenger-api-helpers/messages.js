@@ -6,15 +6,21 @@ const SERVER_URL = process.env.SERVER_URL;
  * them to set their preferences.
  */
 const captureTermDetails = {
+  attachment: {
+    type: 'template',
+    payload: {
+      template_type: 'button',
+      text: 'click to buy life term plan!',
       buttons: [{
         type: 'web_url',
-        title: 'Set Term Preferences click here',
+        title: 'Buy Life Term Plan',
         url: 'https://www.fwd.com.sg/life-insurance/enhanced-term-life-insurance/',
         webview_height_ratio: 'tall',
         messenger_extensions: true,
       }],
+    },
+  },
 };
-
 
 /**
  * Message that informs the user of the promotion and prompts
