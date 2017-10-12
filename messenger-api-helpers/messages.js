@@ -353,7 +353,7 @@ const persistentMenu = [
         },
         {
           type: 'nested',
-          title: 'Ask Human Experts',
+          title: '🔔 Ask Human Experts',
           call_to_actions: [
               {
                 title: 'Let us know your phone number',
@@ -380,7 +380,7 @@ const persistentMenu = [
         },
         {
           type: 'postback',
-          title: 'How to use?',
+          title: '🙋 How to use?',
           payload: JSON.stringify({
             type: 'HOWTOUSE_PAYLOAD',
           })
