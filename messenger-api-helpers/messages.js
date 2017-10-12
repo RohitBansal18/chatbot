@@ -237,6 +237,26 @@ const persistentMenu = [
                 payload: JSON.stringify({
                   type: 'INVESTMENT_PAYLOAD',
                 }),
+              },
+              {
+                type: 'nested',
+                title: 'More',
+                call_to_actions: [
+                    {
+                      title: 'Accident Insurance',
+                      type: 'postback',
+                      payload: JSON.stringify({
+                        type: 'ACCIDENT_PAYLOAD',
+                      }),
+                    },
+                    {
+                      title:'Savings Insurance',
+                      type: 'postback',
+                      payload: JSON.stringify({
+                        type: 'SAVING_PAYLOAD',
+                      }),
+                    }
+                ]
               }
           ]
         },

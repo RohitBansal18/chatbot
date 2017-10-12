@@ -37,12 +37,6 @@ const handleReceivePostback = (event) => {
 
   // perform an action based on the type of payload received
   switch (type) {
-  case 'CHANGE_GIFT':
-    sendApi.sendChooseGiftMessage(senderId);
-    break;
-  case 'CHOOSE_GIFT':
-    handleNewGiftSelected(senderId, data.giftId);
-    break;
   case 'GET_STARTED':
     sendApi.sendHelloRewardMessage(senderId);
     break;
@@ -57,6 +51,12 @@ const handleReceivePostback = (event) => {
     break;
   case 'CAR_PAYLOAD':
     sendApi.handleCarQuickReply(senderId);
+    break;
+  case 'SAVING_PAYLOAD':
+    sendApi.handleSavingsQuickReply(senderId);
+    break;
+  case 'ACCIDENT_PAYLOAD':
+    sendApi.handleAccidentQuickReply(senderId);
     break;
   default:
     console.error(`Unknown Postback called: ${type}`);
