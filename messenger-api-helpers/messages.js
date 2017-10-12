@@ -14,10 +14,18 @@ const buyTermInsurance = {
       buttons: [{
         type: 'web_url',
         title: 'Buy Life Term Plan',
-        url: 'https://www.fwd.com.sg/life-insurance/enhanced-term-life-insurance/',
+        url: 'https://www.policybazaar.com/life-insurance/term-insurance/news/',
         webview_height_ratio: 'tall',
         messenger_extensions: true,
-      }],
+      },
+      {
+        type: 'web_url',
+        title: 'Term Insurance News',
+        url: 'https://www.straitstimes.com/lifestyle/travel',
+        webview_height_ratio: 'tall',
+        messenger_extensions: true,
+      }
+    ],
     },
   },
 };
@@ -34,7 +42,15 @@ const buyTravelInsurance = {
         url: 'https://www.fwd.com.sg/travel-insurance/',
         webview_height_ratio: 'tall',
         messenger_extensions: true,
-      }],
+      },
+      {
+        type: 'web_url',
+        title: 'Travel Insurance News',
+        url: 'https://www.straitstimes.com/lifestyle/travel',
+        webview_height_ratio: 'tall',
+        messenger_extensions: true,
+      }
+    ],
     },
   },
 };
@@ -331,7 +347,9 @@ const whitelisteddomains = {
       'https://www.fwd.com.sg/savings-and-investments/endowment-insurance/',
       'https://www.aia.com.sg/en/our-products/investments.html',
       'https://www.aia.com.sg/en/our-products/accident-protection.html',
-      'https://www.directasia.com/car-insurance/'
+      'https://www.directasia.com/car-insurance/',
+      'https://www.straitstimes.com/lifestyle/travel',
+      'https://www.policybazaar.com/life-insurance/term-insurance/news/'
   ],
 };
 
