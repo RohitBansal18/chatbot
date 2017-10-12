@@ -49,6 +49,12 @@ const handleReceivePostback = (event) => {
   case 'TERM_PAYLOAD':
     sendApi.handleTermQuickReply(senderId);
     break;
+  case 'INVESTMENT_PAYLOAD':
+    sendApi.handleILPQuickReply(senderId);
+    break;
+  case 'CAR_PAYLOAD':
+    sendApi.handleCarQuickReply(senderId);
+    break;
   default:
     console.error(`Unknown Postback called: ${type}`);
     break;
