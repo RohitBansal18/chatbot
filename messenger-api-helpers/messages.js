@@ -298,7 +298,7 @@ const persistentMenu = [
       composer_input_disabled: true,
       call_to_actions: [
         {
-          title: 'Buy Insurance',
+          title: '🏬 Buy Insurance',
           type: 'nested',
           call_to_actions: [
               {
