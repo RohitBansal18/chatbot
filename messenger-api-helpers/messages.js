@@ -239,13 +239,6 @@ const persistentMenu = [
           payload: JSON.stringify({
             type: 'HOWTOUSE_PAYLOAD',
           })
-        },
-        {
-          type: 'postback',
-          title: '😀 Insurance News',
-          payload: JSON.stringify({
-            type: 'NEWS_PAYLOAD',
-          })
         }
       ]
     }
