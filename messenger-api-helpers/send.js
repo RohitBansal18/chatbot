@@ -88,6 +88,21 @@ const handleSavingsQuickReply = (recipientId) => {
   sendMessage(recipientId, messages.buySavingsInsurance);
 }
 
+// Send ILP Webview.
+const handleILPQuickReply = (recipientId) => {
+  sendMessage(recipientId, messages.buyILPInsurance);
+}
+
+// Send Car Webview.
+const handleCarQuickReply = (recipientId) => {
+  sendMessage(recipientId, messages.buyCarInsurance);
+}
+
+// Send personal accident Webview.
+const handleAccidentQuickReply = (recipientId) => {
+  sendMessage(recipientId, messages.buyAccidentInsurance);
+}
+
 export default {
   sendMessage,
   sendReadReceipt,
@@ -95,4 +110,7 @@ export default {
   handleTermQuickReply,
   handleTravelQuickReply,
   handleSavingsQuickReply,
+  handleILPQuickReply,
+  handleCarQuickReply,
+  handleAccidentQuickReply,
 };

@@ -231,14 +231,14 @@ const persistentMenu = [
           title: '😇 Ask Human Experts',
           payload: JSON.stringify({
             type: 'ASKHUMAN_PAYLOAD',
-          }),
+          })
         },
         {
           type: 'postback',
           title: '😀 How to use?',
           payload: JSON.stringify({
             type: 'HOWTOUSE_PAYLOAD',
-          }),
+          })
         },
         {
           type: 'postback',
@@ -246,7 +246,7 @@ const persistentMenu = [
           payload: JSON.stringify({
             type: 'NEWS_PAYLOAD',
           })
-        },
+        }
       ]
     }
   ]

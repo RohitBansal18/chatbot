@@ -84,6 +84,15 @@ const handleReceiveMessage = (event) => {
   case 'SAVING_PAYLOAD':
     sendApi.handleSavingsQuickReply(msgsenderId);
     break;
+  case 'INVESTMENT_PAYLOAD':
+    sendApi.handleILPQuickReply(msgsenderId);
+    break;
+  case 'ACCIDENT_PAYLOAD':
+    sendApi.handleAccidentQuickReply(msgsenderId);
+    break;
+  case 'CAR_PAYLOAD':
+    sendApi.handleCarQuickReply(msgsenderId);
+    break;
   default:
     console.error(`Unknown Message called: ${type}`);
     break;
