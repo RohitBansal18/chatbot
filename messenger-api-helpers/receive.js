@@ -58,6 +58,9 @@ const handleReceivePostback = (event) => {
   case 'ACCIDENT_PAYLOAD':
     sendApi.handleAccidentQuickReply(senderId);
     break;
+  case 'HOWTOUSE_PAYLOAD':
+    sendApi.sendHowtoUseMessage(msgsenderId);
+    break;
   default:
     console.error(`Unknown Postback called: ${type}`);
     break;
