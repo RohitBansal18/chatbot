@@ -12,7 +12,7 @@ const buyTermInsurance = {
       template_type: 'generic',
       elements: [
         {
-          text: 'click to buy life term plan!',
+          title: 'click to buy life term plan!',
           subtitle: 'We got the right term plan for everyone.',
           default_action: {
               type: 'web_url',
@@ -32,7 +32,7 @@ const buyTermInsurance = {
           ],
         },
         {
-          text: 'click term plan news !',
+          title: 'click term plan news !',
           subtitle: 'all term insurance hecks',
           default_action: {
               type: 'web_url',
