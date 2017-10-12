@@ -353,7 +353,7 @@ const persistentMenu = [
         },
         {
           type: 'nested',
-          title: 'Ask Human Experts',
+          title: '🤹 Ask Human Experts',
           call_to_actions: [
               {
                 title: '📱 Let us know your phone number',
