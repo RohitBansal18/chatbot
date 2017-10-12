@@ -9,23 +9,49 @@ const buyTermInsurance = {
   attachment: {
     type: 'template',
     payload: {
-      template_type: 'button',
-      text: 'click to buy life term plan!',
-      buttons: [{
-        type: 'web_url',
-        title: 'Buy Life Term Plan',
-        url: 'https://www.policybazaar.com/life-insurance/term-insurance/news/',
-        webview_height_ratio: 'tall',
-        messenger_extensions: true,
-      },
-      {
-        type: 'web_url',
-        title: 'Term Insurance News',
-        url: 'https://www.straitstimes.com/lifestyle/travel',
-        webview_height_ratio: 'tall',
-        messenger_extensions: true,
-      }
-    ],
+      template_type: 'generic',
+      elements: [
+        {
+          text: 'click to buy life term plan!',
+          subtitle: 'We got the right term plan for everyone.',
+          default_action: {
+              type: 'web_url',
+              url: 'https://www.straitstimes.com/lifestyle/travel',
+              messenger_extensions: true,
+              webview_height_ratio: 'tall',
+              fallback_url: 'https://www.straitstimes.com/lifestyle/travel'
+            },
+          buttons: [
+            {
+              type: 'web_url',
+              title: 'Buy Life Term Plan',
+              url: 'https://www.straitstimes.com/lifestyle/travel',
+              webview_height_ratio: 'tall',
+              messenger_extensions: true,
+            }
+          ],
+        },
+        {
+          text: 'click term plan news !',
+          subtitle: 'all term insurance hecks',
+          default_action: {
+              type: 'web_url',
+              url: 'https://www.policybazaar.com/life-insurance/term-insurance/news/',
+              messenger_extensions: true,
+              webview_height_ratio: 'tall',
+              fallback_url: 'https://www.policybazaar.com/life-insurance/term-insurance/news/'
+            },
+          buttons: [
+            {
+              type: 'web_url',
+              title: 'Term Insurance News',
+              url: 'https://www.policybazaar.com/life-insurance/term-insurance/news/',
+              webview_height_ratio: 'tall',
+              messenger_extensions: true,
+            }
+          ],
+        }
+      ],
     },
   },
 };
