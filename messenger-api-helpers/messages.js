@@ -356,7 +356,7 @@ const persistentMenu = [
           title: '🔔 Ask Human Experts',
           call_to_actions: [
               {
-                title: '☎️ Let us know your phone number',
+                title: '📱 Let us know your phone',
                 type: 'postback',
                 payload: JSON.stringify({
                   type: 'PHONE_PAYLOAD',
