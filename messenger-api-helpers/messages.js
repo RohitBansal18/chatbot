@@ -65,7 +65,7 @@ const buyILPInsurance = {
       buttons: [{
         type: 'web_url',
         title: 'Buy ILP Plan',
-        url: 'http://www.aia.com.sg/en/our-products/investments.html',
+        url: 'https://www.aia.com.sg/en/our-products/investments.html',
         webview_height_ratio: 'tall',
         messenger_extensions: true,
       }],
@@ -82,7 +82,7 @@ const buyAccidentInsurance = {
       buttons: [{
         type: 'web_url',
         title: 'Buy personal plan',
-        url: 'http://www.aia.com.sg/en/our-products/accident-protection.html',
+        url: 'https://www.aia.com.sg/en/our-products/accident-protection.html',
         webview_height_ratio: 'tall',
         messenger_extensions: true,
       }],
@@ -99,7 +99,7 @@ const buyCarInsurance = {
       buttons: [{
         type: 'web_url',
         title: 'Buy Car Plan',
-        url: 'http://www.directasia.com/car-insurance/',
+        url: 'https://www.directasia.com/car-insurance/',
         webview_height_ratio: 'tall',
         messenger_extensions: true,
       }],
@@ -289,9 +289,9 @@ const whitelisteddomains = {
       'https://www.fwd.com.sg/life-insurance/enhanced-term-life-insurance/',
       'https://www.fwd.com.sg/travel-insurance/',
       'https://www.fwd.com.sg/savings-and-investments/endowment-insurance/',
-      'http://www.aia.com.sg/en/our-products/investments.html',
-      'http://www.aia.com.sg/en/our-products/accident-protection.html',
-      'http://www.directasia.com/car-insurance/'
+      'https://www.aia.com.sg/en/our-products/investments.html',
+      'https://www.aia.com.sg/en/our-products/accident-protection.html',
+      'https://www.directasia.com/car-insurance/'
   ],
 };
 

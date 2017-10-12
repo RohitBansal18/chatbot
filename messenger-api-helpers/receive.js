@@ -49,6 +49,9 @@ const handleReceivePostback = (event) => {
   case 'TERM_PAYLOAD':
     sendApi.handleTermQuickReply(senderId);
     break;
+  case 'TRAVEL_PAYLOAD':
+    sendApi.handleTravelQuickReply(senderId);
+    break;
   case 'INVESTMENT_PAYLOAD':
     sendApi.handleILPQuickReply(senderId);
     break;
