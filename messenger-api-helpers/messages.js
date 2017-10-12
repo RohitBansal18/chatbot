@@ -44,7 +44,7 @@ const buySavingsInsurance = {
     type: 'template',
     payload: {
       template_type: 'button',
-      text: 'click to endowment plan!',
+      text: 'click to buy endowment plan!',
       buttons: [{
         type: 'web_url',
         title: 'Buy Endowment Plan',
@@ -55,6 +55,58 @@ const buySavingsInsurance = {
     },
   },
 };
+
+const buyILPInsurance = {
+  attachment: {
+    type: 'template',
+    payload: {
+      template_type: 'button',
+      text: 'click to buy ILP!',
+      buttons: [{
+        type: 'web_url',
+        title: 'Buy ILP Plan',
+        url: 'http://www.aia.com.sg/en/our-products/investments.html',
+        webview_height_ratio: 'tall',
+        messenger_extensions: true,
+      }],
+    },
+  },
+};
+
+const buyAccidentInsurance = {
+  attachment: {
+    type: 'template',
+    payload: {
+      template_type: 'button',
+      text: 'click to buy personal accident plan!',
+      buttons: [{
+        type: 'web_url',
+        title: 'Buy personal plan',
+        url: 'http://www.aia.com.sg/en/our-products/accident-protection.html',
+        webview_height_ratio: 'tall',
+        messenger_extensions: true,
+      }],
+    },
+  },
+};
+
+const buyCarInsurance = {
+  attachment: {
+    type: 'template',
+    payload: {
+      template_type: 'button',
+      text: 'click to buy Car Insurance!',
+      buttons: [{
+        type: 'web_url',
+        title: 'Buy Car Plan',
+        url: 'http://www.directasia.com/car-insurance/',
+        webview_height_ratio: 'tall',
+        messenger_extensions: true,
+      }],
+    },
+  },
+};
+
 
 /**
  * Message that informs the user of the promotion and prompts
@@ -115,7 +167,7 @@ const helloRewardMessage = {
         content_type: 'text',
         title: 'personal accident',
         payload: JSON.stringify({
-            type: 'HOUSE_PAYLOAD',
+            type: 'ACCIDENT_PAYLOAD',
           }),
       },
       {
@@ -175,10 +227,25 @@ const persistentMenu = [
           ]
         },
         {
-          type: 'web_url',
-          title: 'Set Travel Preferences',
-          url: 'https://www.google.com',
-          webview_height_ratio: 'tall',
+          type: 'postback',
+          title: '😇 Ask Human Experts',
+          payload: JSON.stringify({
+            type: 'ASKHUMAN_PAYLOAD',
+          }),
+        },
+        {
+          type: 'postback',
+          title: '😀 How to use?',
+          payload: JSON.stringify({
+            type: 'HOWTOUSE_PAYLOAD',
+          }),
+        },
+        {
+          type: 'postback',
+          title: '😀 Insurance News',
+          payload: JSON.stringify({
+            type: 'NEWS_PAYLOAD',
+          })
         },
       ]
     }
@@ -214,7 +281,10 @@ const whitelisteddomains = {
       'https://www.google.com',
       'https://www.fwd.com.sg/life-insurance/enhanced-term-life-insurance/',
       'https://www.fwd.com.sg/travel-insurance/',
-      'https://www.fwd.com.sg/savings-and-investments/endowment-insurance/'
+      'https://www.fwd.com.sg/savings-and-investments/endowment-insurance/',
+      'http://www.aia.com.sg/en/our-products/investments.html',
+      'http://www.aia.com.sg/en/our-products/accident-protection.html',
+      'http://www.directasia.com/car-insurance/'
   ],
 };
 
@@ -227,4 +297,7 @@ export default {
   buyTermInsurance,
   buyTravelInsurance,
   buySavingsInsurance,
+  buyILPInsurance,
+  buyCarInsurance,
+  buyAccidentInsurance,
 };
