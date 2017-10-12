@@ -102,6 +102,9 @@ const handleReceiveMessage = (event) => {
   case 'CAR_PAYLOAD':
     sendApi.handleCarQuickReply(msgsenderId);
     break;
+  case 'HOWTOUSE_PAYLOAD':
+    sendApi.sendHowtoUseMessage(msgsenderId);
+    break;
   default:
     console.error(`Unknown Message called: ${type}`);
     break;

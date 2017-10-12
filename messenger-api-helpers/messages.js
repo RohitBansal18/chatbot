@@ -196,6 +196,55 @@ const helloRewardMessage = {
     ]
 };
 
+//How to use quickReplies
+const quickRepliesHowtoUse = {
+   text: 'You can use chatbot to do following ',
+   quick_replies: [
+     {
+       content_type: 'text',
+       title: 'Who is our CEO',
+       payload: JSON.stringify({
+           type: 'CEO_PAYLOAD',
+         }),
+     },
+     {
+       content_type: 'text',
+       title: 'Insurance Glossary',
+       payload: JSON.stringify({
+           type: 'INSURANCEGLOSSARY_PAYLOAD',
+         }),
+     },
+     {
+       content_type: 'text',
+       title: 'FAQS',
+       payload: JSON.stringify({
+           type: 'FAQS_PAYLOAD',
+         }),
+     },
+     {
+       content_type: 'text',
+       title: 'Our Solutoins',
+       payload: JSON.stringify({
+           type: 'OURSOLUTIONS_PAYLOAD',
+         }),
+     },
+     {
+       content_type: 'text',
+       title: 'Our Company',
+       payload: JSON.stringify({
+           type: 'OURCOMPANY_PAYLOAD',
+         }),
+     },
+     {
+       content_type: 'text',
+       title: 'Our People',
+       payload: JSON.stringify({
+           type: 'OURPEOPLE_PAYLOAD',
+         }),
+     },
+   ]
+};
+
 
 /**
  * The persistent menu for users to use.
@@ -365,4 +414,5 @@ export default {
   buyILPInsurance,
   buyCarInsurance,
   buyAccidentInsurance,
+  quickRepliesHowtoUse,
 };

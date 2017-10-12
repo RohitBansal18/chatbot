@@ -73,6 +73,12 @@ const sendHelloRewardMessage = (recipientId) => {
   sendMessage(recipientId, messages.quickReplies);
 }
 
+// Send the How to Use telling the user about the what user can do.
+const sendHowtoUseMessage = (recipientId) => {
+//  sendMessage(recipientId, messages.helloRewardMessage);
+  sendMessage(recipientId, messages.quickRepliesHowtoUse);
+}
+
 // Send Term Webview.
 const handleTermQuickReply = (recipientId) => {
   sendMessage(recipientId, messages.buyTermInsurance);
@@ -107,6 +113,7 @@ export default {
   sendMessage,
   sendReadReceipt,
   sendHelloRewardMessage,
+  sendHowtoUseMessage,
   handleTermQuickReply,
   handleTravelQuickReply,
   handleSavingsQuickReply,
