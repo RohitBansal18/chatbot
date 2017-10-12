@@ -241,11 +241,31 @@ const persistentMenu = [
           ]
         },
         {
-          type: 'postback',
+          type: 'nested',
           title: '😇 Ask Human Experts',
-          payload: JSON.stringify({
-            type: 'ASKHUMAN_PAYLOAD',
-          })
+          call_to_actions: [
+              {
+                title: 'Phone',
+                type: 'postback',
+                payload: JSON.stringify({
+                  type: 'PHONE_PAYLOAD',
+                }),
+              },
+              {
+                title:'Email',
+                type: 'postback',
+                payload: JSON.stringify({
+                  type: 'EMAIL_PAYLOAD',
+                }),
+              },
+              {
+                title:'Our Contact',
+                type: 'postback',
+                payload: JSON.stringify({
+                  type: 'OURCONTACT_PAYLOAD',
+                }),
+              }
+          ]
         },
         {
           type: 'postback',
