@@ -16,16 +16,16 @@ const buyTermInsurance = {
           subtitle: 'We got the right term plan for everyone.',
           default_action: {
               type: 'web_url',
-              url: 'https://www.straitstimes.com/lifestyle/travel',
+              url: 'https://www.fwd.com.sg/life-insurance/enhanced-term-life-insurance/',
               messenger_extensions: true,
               webview_height_ratio: 'tall',
-              fallback_url: 'https://www.straitstimes.com/lifestyle/travel'
+              fallback_url: 'https://www.fwd.com.sg/life-insurance/enhanced-term-life-insurance/'
             },
           buttons: [
             {
               type: 'web_url',
               title: 'Buy Life Term Plan',
-              url: 'https://www.straitstimes.com/lifestyle/travel',
+              url: 'https://www.fwd.com.sg/life-insurance/enhanced-term-life-insurance/',
               webview_height_ratio: 'tall',
               messenger_extensions: true,
             }
@@ -302,28 +302,28 @@ const persistentMenu = [
           type: 'nested',
           call_to_actions: [
               {
-                title: 'Travel Insurance',
+                title: '✈️ Travel Insurance',
                 type: 'postback',
                 payload: JSON.stringify({
                   type: 'TRAVEL_PAYLOAD',
                 }),
               },
               {
-                title:'Term Insurance',
+                title:'⛳️ Term Insurance',
                 type: 'postback',
                 payload: JSON.stringify({
                   type: 'TERM_PAYLOAD',
                 }),
               },
               {
-                title:'Car Insurance',
+                title:'🚖 Car Insurance',
                 type: 'postback',
                 payload: JSON.stringify({
                   type: 'CAR_PAYLOAD',
                 }),
               },
               {
-                title:'Investment Insurance',
+                title:'🎯 Investment Insurance',
                 type: 'postback',
                 payload: JSON.stringify({
                   type: 'INVESTMENT_PAYLOAD',
@@ -334,14 +334,14 @@ const persistentMenu = [
                 title: 'More',
                 call_to_actions: [
                     {
-                      title: 'Accident Insurance',
+                      title: '🚑 Accident Insurance',
                       type: 'postback',
                       payload: JSON.stringify({
                         type: 'ACCIDENT_PAYLOAD',
                       }),
                     },
                     {
-                      title:'Savings Insurance',
+                      title:'💰 Savings Insurance',
                       type: 'postback',
                       payload: JSON.stringify({
                         type: 'SAVING_PAYLOAD',
@@ -353,24 +353,24 @@ const persistentMenu = [
         },
         {
           type: 'nested',
-          title: '😇 Ask Human Experts',
+          title: '🤹 Ask Human Experts',
           call_to_actions: [
               {
-                title: 'Phone',
+                title: '📱 Let us know your phone number',
                 type: 'postback',
                 payload: JSON.stringify({
                   type: 'PHONE_PAYLOAD',
                 }),
               },
               {
-                title:'Email',
+                title:'📧 Let us know your Email',
                 type: 'postback',
                 payload: JSON.stringify({
                   type: 'EMAIL_PAYLOAD',
                 }),
               },
               {
-                title:'Our Contact',
+                title:'📣 Our Contact - 1800 XXX XXXX',
                 type: 'postback',
                 payload: JSON.stringify({
                   type: 'OURCONTACT_PAYLOAD',
@@ -380,7 +380,7 @@ const persistentMenu = [
         },
         {
           type: 'postback',
-          title: '😀 How to use?',
+          title: '😕 How to use?',
           payload: JSON.stringify({
             type: 'HOWTOUSE_PAYLOAD',
           })
